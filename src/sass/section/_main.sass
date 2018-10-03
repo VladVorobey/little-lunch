@@ -1,0 +1,314 @@
+.oct-main
+	position: relative
+.oct-title
+	.oct-h2, .oct-h3
+		font-family: $roboto-font
+		color: $mine-shaft
+	.oct-h2
+		font-weight: 900
+		font-size: 32px
+		letter-spacing: 0.025em
+		text-transform: uppercase
+		margin-bottom: 0
+		line-height: 1
+		+r(768)
+			font-size: 28px
+		+r(468)
+			font-size: 24px
+	.oct-h3
+		font-weight: 300
+		font-size: 27px
+		margin-bottom: 35px
+		+r(768)
+			font-size: 24px
+			margin-bottom: 25px
+		+r(468)
+			font-size: 20px
+			margin-bottom: 10px
+.oct-first-screen, .oct-blog-screen
+	background: #ffffff
+	margin-bottom: 95px
+	+r(992)
+		flex-direction: column
+	&__block
+		width: 50%
+		padding-top: 60px
+		padding-bottom: 50px
+		position: relative
+		+r(992)
+			width: 100%
+		+r(768)
+			padding-top: 40px
+			padding-bottom: 30px
+		&_img
+			z-index: 1
+			position: absolute
+			+r(992)
+				position: relative
+				text-align: center
+
+			.oct-img
+				width: 450px
+				height: auto
+				left: 20px
+				top: 0
+		&_img-blog
+			position: relative
+			+r(992)
+				text-align: center
+			.oct-img__blog
+				width: 100%
+				max-width: 362px
+
+		&_price
+			position: absolute
+			top: -35px
+			right: 15px
+			background: url("../img/sticker.svg")
+			width: 210px
+			height: 210px
+			text-align: center
+			font-family: $souece-font
+			color: #ffffff
+			line-height: 1
+			padding-top: 40px
+			+r(992)
+				right: auto
+				left: 45%
+			+r(468)
+				transform: scale(.8)
+				top: -55px
+				z-index: 2
+			.oct-p__price, .oct-h4
+				margin: 0 auto
+			.oct-h4
+				font-weight: 900
+				font-size: 30px
+				width: 120px
+				margin-bottom: 20px
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					background: #ffffff
+					width: 120px
+					height: 1px
+					left: 50%
+					bottom: 0
+					transform: translateY(10px) translateX(-50%)
+				span
+					font-size: 36px
+			.oct-p__price
+				font-weight: 400
+				font-size: 22px
+				width: 120px
+
+	.oct-p
+		font-family: $roboto-font
+		line-height: 1.375
+		margin-bottom: 50px
+		+r(768)
+			margin-bottom: 40px
+		+r(468)
+			margin-bottom: 30px
+		&__third-screen
+			margin-bottom: 0
+			+r(768)
+				margin-bottom: 0
+			+r(468)
+				margin-bottom: 0
+
+.oct-second-screen
+	background: #ffffff
+	margin-bottom: 90px
+	padding-top: 60px
+	padding-bottom: 55px
+	position: relative
+	justify-content: center
+	+r(992)
+		margin-bottom: 50px
+	+r(468)
+		padding: 50px 15px
+	&::before
+		content: ''
+		width: 100%
+		height: 2px
+		background: $teak
+		position: absolute
+		top: -5px
+	&::after
+		content: '"'
+		position: absolute
+		top: -85px
+		font-family: $roboto-font
+		font-size: 180px
+		font-weight: 900
+		color: $teak
+	&__title
+		text-align: center
+		font-family: $souece-font
+		font-size: 26px
+		position: relative
+		line-height: 1.2
+		font-weight: 300
+		max-width: 780px
+		margin-bottom: 60px
+		+r(768)
+			font-size: 24px
+		+r(468)
+			font-size: 20px
+			margin-bottom: 30px
+		&::after
+			content: ''
+			position: absolute
+			width: 78px
+			height: 2px
+			background: $teak
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%) translateY(35px)
+			+r(468)
+				transform: translateX(-50%) translateY(17px)
+		&_sub
+			display: block
+			max-width: 625px
+			margin: 0 auto
+			color: $teak
+			font-weight: 700
+			+r(768)
+				font-size: 24px
+			+r(468)
+				font-size: 20px
+	&__block
+		&_img
+			width: 100%
+			position: absolute
+			bottom: 0
+			+r(992)
+				display: none
+			.oct-img_one
+				left: 0
+				transform: translateY(6px)
+			.oct-img_two
+				position: absolute
+				right: 0
+				transform: translateX(25px) translateY(35px)
+	&__content
+		margin: 0 auto 40px
+		max-width: 520px
+		text-align: center
+		font-family: $souece-font
+		font-size: 26px
+		position: relative
+		line-height: 1.2
+		font-weight: 300
+		+r(768)
+			font-size: 24px
+		+r(468)
+			font-size: 20px
+			margin-bottom: 25px
+.oct-button
+	text-transform: uppercase
+	background: $sushi
+	color: #ffffff
+	padding: 10px 20px 8px
+	border-radius: 10px
+	line-height: 1
+	font-size: 18px
+	font-family: $roboto-font
+	font-weight: 400
+	display: block
+	&__content
+		margin: 0 auto
+.oct-blog-screen
+	position: relative
+	flex-direction: row-reverse
+	margin-bottom: 50px
+	&_reverse
+		flex-direction: row
+		.oct-first-screen__block_img-blog
+			text-align: right
+			+r(992)
+				text-align: center
+			.oct-img__blog
+				position: absolute
+				right: -90px
+				top: 0
+				width: 500px
+				max-width: none
+				+r(992)
+					position: relative
+				+r(768)
+					right: 0
+					width: 80%
+				+r(468)
+					right: -15px
+		.oct-p__third-screen
+			margin-bottom: 80px
+			+r(992)
+				margin-bottom: 30px
+	&::before
+		content: ''
+		width: 100%
+		height: 2px
+		background: $teak
+		position: absolute
+		top: -5px
+		left: 0
+	&__last
+		margin-bottom: 600px
+	.oct-a
+		display: inline-block
+		color: $teak
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	&__main-title
+		justify-content: center
+		h2
+			font-family: $lemon-font
+			font-size: 44px
+			color: $teak
+			font-weight: 400
+
+.oct-blog-screen__block_abs
+	+r(992)
+		padding-bottom: 0
+	&::before
+		content: url("../img/gepa-logo.png")
+		position: absolute
+		width:  100px
+		height: 120px
+		bottom: 0
+		left: 0
+		transform: translateY(40px)
+		+r(992)
+			transform: translateY(120px) scale(.9) translateX(-20px)
+		+r(768)
+			transform: translateY(120px) scale(.7) translateX(-20px)
+	&::after
+		content: url("../img/bio-logo.png")
+		position: absolute
+		width:  90px
+		height: 80px
+		bottom: 0
+		left: 110px
+		transform: translateY(35px)
+		+r(992)
+			transform: translateY(85px) scale(.9) translateX(-20px)
+		+r(768)
+			transform: translateY(85px) scale(.7) translateX(-50px)
+		+r(428)
+			transform: translateY(85px) scale(.7) translateX(-70px)
+.oct-blog-screen__logo
+	position: absolute
+	width: 100px
+	height: 100px
+	top: 50px
+	right: 20px
+	+r(768)
+		width: 70px
+		top: 40px
+	+r(468)
+		width: 60px
+		top: 20px

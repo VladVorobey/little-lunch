@@ -1,0 +1,105 @@
+.oct-header
+	position: relative
+	&__wrapper
+		background: $bg-color url("../img/header-bg.jpg") center no-repeat
+		background-size: cover
+		padding: 125px 50px 95px
+		text-align: center
+		position: relative
+		+r(768)
+			padding: 100px 50px 80px
+		+r(468)
+			padding: 70px 15px 50px
+		&_logo
+			position: absolute
+			right: 47px
+			top: 40px
+			+r(992)
+				right: 15px
+			+r(768)
+				top: 15px
+			.oct-img
+				width: 127px
+				height: 127px
+				+r(992)
+					width: 100px
+					height: 100px
+				+r(768)
+					width: 50px
+					height: 50px
+	&__title
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 63px
+			height: 3px
+			background: $teak
+			left: 50%
+			transform: translateX(-50%) translateY(112px)
+			top: 0
+			+r(768)
+				transform: translateX(-50%) translateY(82px)
+			+r(468)
+				transform: translateX(-50%) translateY(55px)
+				height: 2px
+		.oct-h1
+			font-size: 83px
+			font-weight: 400
+			font-family: $lemon-font
+			color: $teak
+			line-height: 1.2
+			position: relative
+			margin-bottom: 35px
+			+r(768)
+				font-size: 62px
+				margin-bottom: 25px
+			+r(468)
+				font-size: 42px
+				margin-bottom: 15px
+			&::before
+				content: ''
+				position: absolute
+				background: url("../img/h1before.png")
+				width: 61px
+				height: 22px
+				top: 0
+				left: 50%
+				transform: translateY(-20px) translateX(-100px)
+				+r(768)
+					transform: translateY(-12px) translateX(-85px) scale(0.7)
+				+r(468)
+					transform: translateY(-12px) translateX(-67px) scale(0.5)
+			&::after
+				content: '3'
+				position: absolute
+				font-size: 49px
+				color: #000000
+				top: 0
+				right: 50%
+				transform: translateY(-20px) translateX(235px)
+				font-family: $lemon-font
+				font-weight: 600
+				+r(768)
+					transform: translateY(-10px) translateX(175px)
+					font-size: 36px
+				+r(468)
+					font-size: 25px
+					transform: translateY(-5px) translateX(120px)
+		.oct-h2
+			font-family: $roboto-font
+			font-weight: 400
+			font-size: 28px
+			color: #000000
+			line-height: 1.25
+			max-width: 300px
+			margin: 0 auto
+			+r(768)
+				font-size: 21px
+				max-width: 250px
+			+r(468)
+				font-size: 16px
+				max-width: 200px
+			span
+				font-weight: 700
+				color: $teak
